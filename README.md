@@ -44,6 +44,12 @@ GoKage loads Wikipedia abstract dumps, processes them using text analysis techni
 
 Clone the repository using Git:
 
+## Usage
+
+### Running the Search Engine
+
+To run the search engine, use the following command:
+
 ```bash
-git clone https://github.com/hossainsmshakib/GoKage.git
-cd GoKage
+go run main.go -p <path-to-wikipedia-dump> -q <search-query>
+
