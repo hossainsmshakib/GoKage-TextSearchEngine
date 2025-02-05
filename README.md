@@ -1,55 +1,27 @@
 # GoKage: Full Text Search Engine
 
-GoKage is a simple, efficient, and scalable full-text search engine built in Go. It is designed to index and search Wikipedia abstract dumps using an inverted index and standard text analysis techniques such as tokenization, stopword removal, and stemming. 
-
-The search engine is capable of querying large datasets with minimal latency and supports efficient intersection-based searching for relevant documents.
-
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Running the Search Engine](#running-the-search-engine)
-  - [Query Example](#query-example)
-- [Code Structure](#code-structure)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Project Overview
-
-GoKage loads Wikipedia abstract dumps, processes them using text analysis techniques, and provides an efficient search mechanism through an inverted index. The system indexes documents and supports text-based queries to return relevant results in a fraction of the time.
-
-### Key Components:
-1. **Tokenizer**: Splits the text into tokens (words) based on letters and numbers.
-2. **Analyzer**: Processes the text by converting it to lowercase, removing stopwords, and applying stemming.
-3. **Indexing**: Documents are indexed using an inverted index that maps tokens to document IDs.
-4. **Search**: A query is processed by tokenizing and analyzing it. The system returns matching document IDs based on token intersections.
+GoKage is a lightweight and efficient full-text search engine built in Go. It is designed to index and search large datasets, such as Wikipedia abstract dumps, using an inverted index and basic text analysis techniques like tokenization, stopword removal, and stemming.
 
 ## Features
 
-- **Document Indexing**: Efficiently indexes documents with text-based analysis.
-- **Full-Text Search**: Queries can be run against the indexed documents, with results returned by intersecting token matches.
-- **Time Efficiency**: Logs the time taken for each step (loading, indexing, and searching), allowing you to monitor performance.
-- **Handling Large Dumps**: Supports large datasets such as Wikipedia abstract dumps in gzip format.
+- **Efficient Document Indexing**: GoKage indexes documents with text analysis methods for quick and efficient retrieval of results.
+  
+- **Full-Text Search**: Users can run full-text search queries against indexed documents, retrieving relevant results based on token matches.
+  
+- **Tokenization and Analysis**: Text is broken down into tokens (words), normalized to lowercase, and processed to remove unnecessary stopwords.
+  
+- **Inverted Indexing**: An inverted index maps terms to their document locations, enabling fast search results.
 
-## Installation
+- **Query Support**: Users can input a search query and the engine will return matching document IDs based on token intersections.
+  
+- **Optimized for Large Datasets**: Handles large Wikipedia abstract dumps, making it scalable and practical for large-scale search applications.
 
-### Prerequisites
+- **Time Efficiency Logging**: Logs the time taken for each step (loading, indexing, searching), providing insights into the performance of the search process.
 
-- **Go**: Ensure that Go is installed on your machine. You can download it from [Go's official website](https://golang.org/dl/).
-- **Wikipedia Dump**: Download the Wikipedia abstract dump you want to use. For example, the file `enwiki-latest-abstract1.xml.gz` can be found at [Wikipedia Dumps](https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-abstract1.xml.gz).
+- **Simple Command-Line Interface**: Easily run the search engine via command-line inputs specifying the path to a Wikipedia dump and the query term.
 
-### Clone the Repository
+## License
 
-Clone the repository using Git:
+GoKage is licensed under the MIT License. See the LICENSE file for more information.
 
-## Usage
-
-### Running the Search Engine
-
-To run the search engine, use the following command:
-
-```bash
-go run main.go -p <path-to-wikipedia-dump> -q <search-query>
-
+![image](https://github.com/user-attachments/assets/dd6060b4-15cd-4a35-ad6b-f33f44af16c8)
