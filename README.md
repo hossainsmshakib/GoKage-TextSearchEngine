@@ -88,7 +88,7 @@ To use this search engine, you need to download the Wikipedia abstract dump. You
 
 Here’s a performance screenshot of the search engine in action:  
 
-![GoKage Performance](![image](https://github.com/user-attachments/assets/3820b597-71ec-44f4-ae92-d4f1170f4562)
+(![image](https://github.com/user-attachments/assets/3820b597-71ec-44f4-ae92-d4f1170f4562)
 
 
 ## License  
