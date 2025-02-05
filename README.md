@@ -13,6 +13,72 @@ GoKage is a lightweight and efficient full-text search engine built in Go. It is
 - **Time Efficiency Logging**: Logs the time taken for each step (loading, indexing, searching), providing insights into the performance of the search process.  
 - **Simple Command-Line Interface**: Easily run the search engine via command-line inputs specifying the path to a Wikipedia dump and the query term.  
 
+## How It Works  
+
+GoKage processes a Wikipedia abstract dump by loading, analyzing, and indexing its content. When a user searches for a term, the system retrieves relevant documents based on indexed tokens.  
+
+### Workflow:  
+
+1. **Loading Data**  
+   - The search engine reads a Wikipedia abstract dump (`.xml.gz` file).  
+   - Each document is parsed and extracted from the dataset.  
+
+2. **Text Processing**  
+   - The text is split into tokens (words).  
+   - Stopwords are removed (common words like "the", "is", "and").  
+   - Stemming is applied (converting words to their root form, e.g., "running" → "run").  
+
+3. **Indexing**  
+   - An inverted index is built where each token is mapped to the documents it appears in.  
+   - The index allows fast retrieval of relevant documents.  
+
+4. **Querying**  
+   - A user inputs a search query via the command line.  
+   - The query is tokenized, analyzed, and matched against the index.  
+   - The engine finds documents containing the search tokens and returns them.  
+
+### Process Diagram  
+
+
+                +----------------------+
+                |  Wikipedia Dump File  |
+                +----------------------+
+                          |
+                          v
+                +----------------------+
+                |  Load & Parse Data    |
+                +----------------------+
+                          |
+                          v
+                +----------------------+
+                |  Tokenization & NLP   |
+                +----------------------+
+                          |
+                          v
+                +----------------------+
+                |  Inverted Indexing    |
+                +----------------------+
+                          |
+                          v
+          +----------------------------------+
+          |  User Input: Search Query       |
+          +----------------------------------+
+                          |
+                          v
+                +----------------------+
+                |  Query Processing     |
+                +----------------------+
+                          |
+                          v
+                +----------------------+
+                |  Retrieve Documents   |
+                +----------------------+
+                          |
+                          v
+                +----------------------+
+                |  Display Results      |
+                +----------------------+
+
 ## Dataset  
 
 To use this search engine, you need to download the Wikipedia abstract dump. You can get the latest dump from:  
@@ -22,10 +88,8 @@ To use this search engine, you need to download the Wikipedia abstract dump. You
 
 Here’s a performance screenshot of the search engine in action:  
 
-![GoKage Performance](![image](https://github.com/user-attachments/assets/f3713529-fb25-4ba3-abd6-2effbe4beb31)
-)  
+![GoKage Performance](![image](https://github.com/user-attachments/assets/3820b597-71ec-44f4-ae92-d4f1170f4562)
 
-*(Replace `path-to-your-screenshot.png` with the actual path or URL of your screenshot.)*  
 
 ## License  
 
