@@ -135,6 +135,8 @@ The project is organized as follows:
 ## Screenshot
 
 Here’s a performance screenshot of the search engine in action:
+![image](https://github.com/user-attachments/assets/48778fcc-32ea-4012-a974-3f5fce2713d0)
+
 
 
 
