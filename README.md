@@ -88,7 +88,8 @@ To use this search engine, you need to download the Wikipedia abstract dump. You
 
 Here’s a performance screenshot of the search engine in action:  
 
-(![image](https://github.com/user-attachments/assets/3820b597-71ec-44f4-ae92-d4f1170f4562)
+![image](https://github.com/user-attachments/assets/bada1ce2-075d-44d5-868a-4f6a85458142)
+
 
 
 ## License  
